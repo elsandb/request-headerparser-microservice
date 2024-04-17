@@ -19,9 +19,20 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-// your first API endpoint...
-app.get('/api/hello', function (req, res) {
-  res.json({ greeting: 'hello API' });
+/**
+ * A request to `/api/whoami` returns a JSON object with 
+ * request header information about the user, like this:
+ * 
+ * {"ipaddress":"159.20.14.100",
+ * "language":"en-US,en;q=0.5",
+ * "software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}
+ */
+app.get('/api/whoami', function (req, res) {
+  res.json({
+    "ipadress": req.ip,
+    "language": req.headers['accept-language'],
+    "software": req.headers["user-agent"]
+  });  
 });
 
 // listen for requests :)
