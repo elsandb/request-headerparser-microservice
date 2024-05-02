@@ -1,6 +1,6 @@
 # Request Header Parser Microservice Project - [FreeCodeCamp](https://www.freecodecamp.org)
 
-This repository contains a full stack JavaScript app providing an API endpoint for retrieving request header information.
+This repository contains a JavaScript app providing an API endpoint for retrieving request header information.
 
 The project is built on top of freeCodeCamp's boilerplate code, available from https://github.com/freeCodeCamp/boilerplate-project-headerparser/.
 
